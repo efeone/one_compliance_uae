@@ -7,6 +7,7 @@ from one_compliance_uae.custom.custom_field.customer import get_customer_custom_
 def after_install():
 	#Creating PW IOI specific custom fields
 	create_custom_fields(get_custom_fields(), ignore_validate=True)
+	create_property_setters(get_property_setters())
 
 def after_migrate():
 	after_install()
@@ -37,3 +38,31 @@ def get_custom_fields():
 	custom_fields = get_customer_custom_fields()
 	return custom_fields
 
+def create_property_setters(property_setter_datas):
+	'''
+	Method to create custom property setters
+	args:
+		property_setter_datas : list of dict of property setter obj
+	'''
+	for property_setter_data in property_setter_datas:
+		if frappe.db.exists("Property Setter", property_setter_data):
+			continue
+		property_setter = frappe.new_doc("Property Setter")
+		property_setter.update(property_setter_data)
+		property_setter.flags.ignore_permissions = True
+		property_setter.insert()
+
+def get_property_setters():
+	'''
+	 specific property setters that need to be added to the DocTypes
+	'''
+	return [
+		{
+			"doctype_or_field": "DocField",
+			"doc_type": "Customer",
+			"field_name": "custom_customer_company_details",
+			"property": "label",
+			"property_type": "Data",
+			"value": "Company Details"
+		}
+	]

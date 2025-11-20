@@ -58,7 +58,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "license_registration_number"
+				"insert_after": "custom_column_break_aay8e"
 			},
 			{
 				"fieldname": "license_expiry_date",
@@ -98,7 +98,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "moa_signing_date"
+				"insert_after": "registered_email_id_with_authority"
 			},
 			{
 				"fieldname": "actual_business_activity",
@@ -108,7 +108,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "licensed_business_activity"
+				"insert_after": "moa_signing_date"
 			},
 			{
 				"fieldname": "legal_column_break",
@@ -123,7 +123,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "legal_column_break"
+				"insert_after": "custom_dubai_chamber_membership"
 			},
 			{
 				"fieldname": "chamber_membership_start_date",
@@ -133,7 +133,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "dubai_chamber_membership_number"
+				"insert_after": "establishment_card_issue_date"
 			},
 			{
 				"fieldname": "establishment_card_issue_date",
@@ -143,7 +143,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "chamber_membership_start_date"
+				"insert_after": "custom_column_break_eobi8"
 			},
 			{
 				"fieldname": "establishment_card_holder_name",
@@ -153,7 +153,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "establishment_card_issue_date"
+				"insert_after": "dubai_chamber_membership_number"
 			},
 			{
 				"fieldname": "establishment_card_expiry_date",
@@ -173,7 +173,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "establishment_card_expiry_date"
+				"insert_after": "license_registration_number"
 			},
 			{
 				"fieldname": "registered_email_id_with_authority",
@@ -193,7 +193,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "registered_email_id_with_authority"
+				"insert_after": "legal_column_break"
 			},
 			{
 				"fieldname": "license_manager_email",
@@ -236,19 +236,6 @@ def get_customer_custom_fields():
 				"insert_after": "external_authority_name"
 			},
 			{
-				"fieldname": "aml_record",
-				"fieldtype": "Tab Break",
-				"label": "AML Record",
-				"options": "aml_record",
-				"insert_after": "external_authority_permit_expiry_date"
-			},
-			{
-				"fieldname": "aml_record_section",
-				"fieldtype": "Tab Break",
-				"label": "AML Record",
-				"insert_after": "aml_record"
-			},
-			{
 				"fieldname": "company_risk_category",
 				"fieldtype": "Data",
 				"label": "Company Risk Category",
@@ -256,42 +243,23 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "aml_record_section"
+				"insert_after": "trade_name"
 			},
 			{
-				"fieldname": "company_risk_status",
+				"fieldname": "aml_risk_status",
 				"fieldtype": "Data",
-				"label": "Company Risk Status",
+				"label": "AML Risk Status",
 				"reqd": 0,
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
+				"description": "Add AML Status",
 				"insert_after": "company_risk_category"
 			},
 			{
 				"fieldname": "aml_column_break",
 				"fieldtype": "Column Break",
-				"insert_after": "company_risk_status"
-			},
-			{
-				"fieldname": "shareholder_risk_status",
-				"fieldtype": "Data",
-				"label": "Shareholder Risk Status",
-				"reqd": 0,
-				"in_list_view": 0,
-				"options": "",
-				"depends_on": "",
-				"insert_after": "aml_column_break"
-			},
-			{
-				"fieldname": "shareholder_risk_category",
-				"fieldtype": "Data",
-				"label": "Shareholder Risk Category",
-				"reqd": 0,
-				"in_list_view": 0,
-				"options": "",
-				"depends_on": "",
-				"insert_after": "shareholder_risk_status"
+				"insert_after": "aml_risk_status"
 			},
 			{
 				"fieldname": "mohre_record",
@@ -301,7 +269,17 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "mohre_record",
 				"depends_on": "",
-				"insert_after": "shareholder_risk_category"
+				"insert_after": "chamber_membership_start_date"
+			},
+			{
+				"fieldname": "mohre_information",
+				"fieldtype": "Section Break",
+				"label": "MOHRE Information",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "mohre_record"
 			},
 			{
 				"fieldname": "no_of_employee_quota",
@@ -311,7 +289,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "no_of_employee_quota",
 				"depends_on": "",
-				"insert_after": "mohre_record"
+				"insert_after": "mohre_information"
 			},
 			{
 				"fieldname": "labor_category_number",
@@ -354,6 +332,16 @@ def get_customer_custom_fields():
 				"insert_after": "registered_mobile_number"
 			},
 			{
+				"fieldname": "registered_column",
+				"fieldtype": "Column Break",
+				"label": "",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "registered_email_id"
+			},
+			{
 				"fieldname": "primary_contact_person",
 				"fieldtype": "Phone",
 				"label": "Primary Contact Person",
@@ -361,7 +349,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "registered_email_id"
+				"insert_after": "custom_column_break_bqi4w"
 			},
 			{
 				"fieldname": "e_signature_card_holder_name",
@@ -371,7 +359,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "primary_contact_person"
+				"insert_after": "total_employees"
 			},
 			{
 				"fieldname": "e_signature_card_holder_contact_no",
@@ -391,7 +379,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "Email",
 				"depends_on": "",
-				"insert_after": "e_signature_card_holder_contact_no"
+				"insert_after": "e_signature_card_code_password"
 			},
 			{
 				"fieldname": "e_signature_card_code_password",
@@ -401,7 +389,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "e_signature_card_code_password",
 				"depends_on": "",
-				"insert_after": "e_signature_card_holder_email"
+				"insert_after": "e_signature_card_holder_contact_no"
 			},
 			{
 				"fieldname": "mohre_mobile_number",
@@ -411,7 +399,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "e_signature_card_code_password"
+				"insert_after": "primary_contact_person"
 			},
 			{
 				"fieldname": "mohre_landline_number",
@@ -421,12 +409,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "mohre_mobile_number"
-			},
-			{
-				"fieldname": "mohre_column_break",
-				"fieldtype": "Column Break",
-				"insert_after": "mohre_landline_number"
+				"insert_after": "mohre_email_id"
 			},
 			{
 				"fieldname": "mohre_email_id",
@@ -436,7 +419,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "Email",
 				"depends_on": "",
-				"insert_after": "mohre_column_break"
+				"insert_after": "mohre_mobile_number"
 			},
 			{
 				"fieldname": "total_employees",
@@ -446,7 +429,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "mohre_email_id"
+				"insert_after": "registered_column"
 			},
 			{
 				"fieldname": "visa_quota_increase_date",
@@ -456,7 +439,17 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "total_employees"
+				"insert_after": "total_female_visa_quota"
+			},
+			{
+				"fieldname": "visa_column_break",
+				"fieldtype": "Column Break",
+				"label": "",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "visa_quota_increase_date"
 			},
 			{
 				"fieldname": "total_visa_quota",
@@ -466,7 +459,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "visa_quota_increase_date"
+				"insert_after": "custom_visa_detailes_"
 			},
 			{
 				"fieldname": "used_visa_quota",
@@ -476,7 +469,17 @@ def get_customer_custom_fields():
 				"in_list_view": 1,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "total_visa_quota"
+				"insert_after": "quota_column_break"
+			},
+			{
+				"fieldname": "quota_column_break",
+				"fieldtype": "Column Break",
+				"label": "",
+				"reqd": 0,
+				"in_list_view": 1,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "unused_female_visa_quota"
 			},
 			{
 				"fieldname": "unused_visa_quota",
@@ -486,7 +489,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "used_visa_quota"
+				"insert_after": "visa_column_break"
 			},
 			{
 				"fieldname": "total_male_visa_quota",
@@ -496,7 +499,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "unused_visa_quota"
+				"insert_after": "total_visa_quota"
 			},
 			{
 				"fieldname": "used_male_visa_quota",
@@ -506,7 +509,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "total_male_visa_quota"
+				"insert_after": "used_visa_quota"
 			},
 			{
 				"fieldname": "unused_male_visa_quota",
@@ -516,7 +519,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "used_male_visa_quota"
+				"insert_after": "unused_visa_quota"
 			},
 			{
 				"fieldname": "total_female_visa_quota",
@@ -526,7 +529,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "unused_male_visa_quota"
+				"insert_after": "total_male_visa_quota"
 			},
 			{
 				"fieldname": "used_female_visa_quota",
@@ -536,7 +539,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "total_female_visa_quota"
+				"insert_after": "used_male_visa_quota"
 			},
 			{
 				"fieldname": "unused_female_visa_quota",
@@ -546,17 +549,106 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "used_female_visa_quota"
+				"insert_after": "unused_male_visa_quota"
 			},
 			{
-				"fieldname": "shareholding_and_management",
+				"fieldname": "dubai_chamber",
 				"fieldtype": "Tab Break",
-				"label": "Shareholding & Management",
+				"label": "Dubai Chamber",
 				"reqd": 0,
 				"in_list_view": 0,
-				"options": "shareholding_and_management",
+				"options": "",
 				"depends_on": "",
-				"insert_after": "unused_female_visa_quota"
+				"insert_after": "external_authority_permit_expiry_date"
+			},
+			{
+				"fieldname": "custom_dubai_chamber_membership",
+				"fieldtype": "Section Break",
+				"label": "Dubai Chamber Membership",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "dubai_chamber"
+			},
+			{
+				"fieldname": "custom_column_break_eobi8",
+				"fieldtype": "Column Break",
+				"label": "",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "establishment_card_expiry_date"
+			},
+			{
+				"fieldname": "custom_column_break_aay8e",
+				"fieldtype": "Column Break",
+				"label": "",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "licensed_business_activity"
+			},
+			{
+				"fieldname": "custom_column_break_bqi4w",
+				"fieldtype": "Column Break",
+				"label": "",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "e_signature_card_holder_email"
+			},
+			{
+				"fieldname": "custom_visa_detailes_",
+				"fieldtype": "Section Break",
+				"label": "Visa Detailes",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "mohre_landline_number"
+			},
+			{
+				"fieldname": "customer_name_in_arabic",
+				"fieldtype": "Data",
+				"label": "Customer Name in Arabic",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "customer_name"
+			}
+		],
+		"Stakeholder Detail": [
+			{
+				"fieldname": "share_section_break",
+				"fieldtype": "Section Break",
+				"label": "Share Information",
+				"depends_on": "eval:doc.is_shareholder == 1",
+				"insert_after": "is_ubo"
+			},
+			{
+				"fieldname": "share_type",
+				"fieldtype": "Select",
+				"label": "Share Type",
+				"reqd": 0,
+				"in_list_view": 0,
+				"options": "Individual\nCorporate",
+				"depends_on": "",
+				"insert_after": "share_section_break"
+			},
+			{
+				"fieldname": "no_of_shares",
+				"fieldtype": "Float",
+				"label": "No of Shares",
+				"reqd": 0,
+				"in_list_view": 1,
+				"options": "",
+				"depends_on": "",
+				"insert_after": "share_type"
 			},
 			{
 				"fieldname": "share_capital",
@@ -566,37 +658,7 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "shareholding_and_management"
-			},
-			{
-				"fieldname": "no_of_shares",
-				"fieldtype": "Int",
-				"label": "No of Shares",
-				"reqd": 0,
-				"in_list_view": 1,
-				"options": "",
-				"depends_on": "",
-				"insert_after": "share_capital"
-			},
-			{
-				"fieldname": "shareholder_name",
-				"fieldtype": "Data",
-				"label": "Shareholder Name",
-				"reqd": 0,
-				"in_list_view": 0,
-				"options": "",
-				"depends_on": "",
 				"insert_after": "no_of_shares"
-			},
-			{
-				"fieldname": "shareholder_type",
-				"fieldtype": "Data",
-				"label": "Shareholder Type",
-				"reqd": 0,
-				"in_list_view": 0,
-				"options": "shareholder_type",
-				"depends_on": "",
-				"insert_after": "shareholder_name"
 			},
 			{
 				"fieldname": "stake_in_shareholding",
@@ -606,7 +668,8 @@ def get_customer_custom_fields():
 				"in_list_view": 0,
 				"options": "",
 				"depends_on": "",
-				"insert_after": "shareholder_type"
-			}
+				"insert_after": "share_capital"
+			},
 		]
+
 	}
