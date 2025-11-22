@@ -83,12 +83,13 @@ app_license = "mit"
 # ------------
 
 # before_install = "one_compliance_uae.install.before_install"
-# after_install = "one_compliance_uae.install.after_install"
+after_install = "one_compliance_uae.setup.after_install"
+after_migrate = "one_compliance_uae.setup.after_migrate"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "one_compliance_uae.uninstall.before_uninstall"
+before_uninstall = "one_compliance_uae.setup.before_uninstall"
 # after_uninstall = "one_compliance_uae.uninstall.after_uninstall"
 
 # Integration Setup
