@@ -3,6 +3,9 @@ from frappe import _
 from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 from one_compliance_uae.custom.custom_field.customer import get_customer_custom_fields
+from one_compliance_uae.custom.custom_field.opportunity import get_opportunity_custom_fields
+from one_compliance_uae.custom.custom_field.opportunity_item import get_opportunity_item_custom_fields
+from one_compliance_uae.custom.custom_field.multi_company_detail import get_multi_company_detail_custom_fields
 
 def after_install():
 	#Creating PW IOI specific custom fields
@@ -36,6 +39,9 @@ def get_custom_fields():
 		Method to get all custom fields that need to be created for PW IT Helpdesk and CM
 	'''
 	custom_fields = get_customer_custom_fields()
+	custom_fields.update(get_opportunity_custom_fields())
+	custom_fields.update(get_opportunity_item_custom_fields())
+	custom_fields.update(get_multi_company_detail_custom_fields())
 	return custom_fields
 
 def create_property_setters(property_setter_datas):
