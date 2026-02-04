@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-18 12:48:56.102525",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "registered_mobile_number",
+  "registered_telephone_number",
+  "registered_address",
+  "registered_email_id",
+  "location",
+  "usage_with_effect_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "registered_mobile_number",
+   "fieldtype": "Phone",
+   "label": "Registered Mobile Number"
+  },
+  {
+   "fieldname": "registered_telephone_number",
+   "fieldtype": "Phone",
+   "label": "Registered Telephone Number"
+  },
+  {
+   "fieldname": "registered_address",
+   "fieldtype": "Small Text",
+   "label": "Registered Address"
+  },
+  {
+   "fieldname": "registered_email_id",
+   "fieldtype": "Data",
+   "label": "Registered Email Id"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "usage_with_effect_from",
+   "fieldtype": "Date",
+   "label": "Usage With Effect From"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-18 12:52:34.964914",
+ "modified_by": "Administrator",
+ "module": "One Compliance UAE",
+ "name": "PO Box Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-18 12:49:52.051871",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document",
+  "fields",
+  "notification_type",
+  "sub_categrory",
+  "message",
+  "next_processing_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "document",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fields",
+   "options": "DocField"
+  },
+  {
+   "fieldname": "notification_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Notification Type",
+   "options": "Task\nMessage"
+  },
+  {
+   "fieldname": "sub_categrory",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub Categrory",
+   "options": "Compliance Sub Category"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Message"
+  },
+  {
+   "fieldname": "next_processing_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Processing Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-18 12:56:24.809720",
+ "modified_by": "Administrator",
+ "module": "One Compliance UAE",
+ "name": "Expiry Information Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
